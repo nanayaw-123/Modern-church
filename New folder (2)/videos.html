@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videos - Grace Church</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.2/plyr.css">
+</head>
+<body>
+    <!-- Hero Section -->
+    <header class="hero-small">
+        <div class="overlay"></div>
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12 text-center text-white">
+                    <h1 class="display-4">Video Library</h1>
+                    <p class="lead">Watch our services, testimonies, and special events</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Video Categories -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <!-- Sidebar Filter -->
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Categories</h5>
+                            <div class="list-group">
+                                <button class="list-group-item active" data-filter="all">All Videos</button>
+                                <button class="list-group-item" data-filter="sermons">Sermons</button>
+                                <button class="list-group-item" data-filter="testimonies">Testimonies</button>
+                                <button class="list-group-item" data-filter="worship">Worship</button>
+                                <button class="list-group-item" data-filter="events">Special Events</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-9">
+                    <!-- Featured Video -->
+                    <div class="featured-video mb-5">
+                        <div class="plyr__video-embed" id="featuredPlayer">
+                            <iframe
+                                src="https://www.youtube.com/embed/your-video-id?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1"
+                                allowfullscreen
+                                allowtransparency
+                                allow="autoplay"
+                            ></iframe>
+                        </div>
+                    </div>
+
+                    <!-- Video Grid -->
+                    <div class="row g-4" id="videoGrid">
+                        <!-- Video Card Template -->
+                        <div class="col-md-6 col-lg-4 video-item" data-category="sermons">
+                            <div class="video-card">
+                                <div class="video-thumbnail">
+                                    <img src="../images/video-thumb-1.jpg" alt="Sermon Title">
+                                    <div class="play-overlay">
+                                        <i class="fas fa-play"></i>
+                                    </div>
+                                </div>
+                                <div class="video-info">
+                                    <h3 class="video-title">Sunday Service</h3>
+                                    <p class="video-meta">
+                                        <i class="fas fa-calendar-alt me-2"></i>Oct 15, 2023
+                                        <i class="fas fa-clock ms-3 me-2"></i>45:00
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- More video cards... -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.plyr.io/3.7.2/plyr.js"></script>
+    <script src="../js/videos.js"></script>
+</body>
+</html>
